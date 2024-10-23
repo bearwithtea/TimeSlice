@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeSlice</title>
+  <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Customizable Pomodoro Timer</h1>
+
+    <div class="timer">
+      <span id="minutes">25</span>:<span id="seconds">00</span>
+    </div>
+
+    <div class="controls">
+      <button id="start-btn">Start</button>
+      <button id="pause-btn">Pause</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+
+    <div class="customization">
+      <label for="work-time">Work Time (minutes):</label>
+      <input type="number" id="work-time" value="25" min="1" max="60">
+      <label for="break-time">Break Time (minutes):</label>
+      <input type="number" id="break-time" value="5" min="1" max="30">
+      <button id="save-settings-btn">Save Settings</button>
+    </div>
+
+    <div class="notes" id="notes-container">
+    <div id="notes-header">Drag me!</div>
+    <div class="tooltip-container">
+      <textarea id="notes" placeholder="Write your notes here..."></textarea>
+      <div class="tooltip-text" id="tooltip-text">You can drag this note block!</div> <!-- Tooltip content -->
+    </div>
+  </div>
+  <script src="timer.js"></script>
+</body>
+</html>
